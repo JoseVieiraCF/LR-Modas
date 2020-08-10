@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Notification,Menu } = require('electron')
 
 function createWindow () {
   // create a window
@@ -9,6 +9,7 @@ function createWindow () {
       nodeIntegration: true
     }
   })
+  
 
   // load the index file
   win.loadFile('index.html')
@@ -31,4 +32,8 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+
+
+  
 
